@@ -5,10 +5,6 @@ var app = express();
 app.get("/", function(req, res) {
 	res.sendfile('eCalendar.html')
 });
-
-app.get("/SUP", function(req, res) {
-	res.send({name:"Raymond",age:40});
-});
  
 app.post("/user/add", function(req, res) { 
 	/* some server side logic */
