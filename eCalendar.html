@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel='stylesheet' href='dependencies/jquery-ui.min.css' />
+<link href='dependencies/fullcalendar.css' rel='stylesheet' />
+<script src='dependencies/jquery.min.js'></script>
+<script src='dependencies/fullcalendar.js'></script>
+<script>
+
+	var currDaySelect;
+	var temp;
+	
+	$(document).ready(function() {
+	
+		var date = new Date();
+		var d = date.getDate();
+		var m = date.getMonth();
+		var y = date.getFullYear();
+		
+		$('#calendar').fullCalendar({
+			
+			//$(d).fullcalendar('select', startDate, endDate, allDay),
+
+			dayClick: function(date, allDay, jsEvent, view) {
+				$(currDaySelect).css('border-right-width', '0px');
+				$(this).css('border-right-width', '5px');
+				$(this).css('border-right-color', 'black');
+				currDaySelect = this;
+				$(this).fullCalendar('select', startDate, endDate, allDay);
+				//BUG: Light blue box fails to adjust size after window resize
+					//Possible Solution: Get rid of blue box
+			},
+
+			eventMouseover: function(event, jsEvent, view) {
+				alert("yo");
+			},
+
+			select: function() {
+				alert('etgrt');			
+			},
+
+			windowResize: function(view){
+				//viewRender();
+			},
+
+
+		});
+
+		
+		
+		
+	});
+
+</script>
+<style>
+
+	body {
+		font-size: .8em;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		}
+
+	#outer {
+		width: 100%
+		height: 100%
+		}
+
+	#calendar {
+		margin-left: 25%;
+		position: fixed;
+		margin-top: 10vh;
+		width: 50vw;
+		}
+	
+	#box {
+		margin-top: 10vh;
+		position: absolute;
+		height: 500vw;
+		width: 20%;
+		background-color: #C0C0C0;
+		}
+
+	#topbar {
+		margin-top: 0px;
+		height: 40px;
+		width: 100%;
+		background-color: #3B5998;
+		position: fixed;
+		text-align: left;
+		line-height: -40px;
+		font-size: 3em;
+		font-family: Florence;
+		}
+	#shiz {
+		color: white;
+		margin-left: 20px;
+		margin-top: 0px;
+		}
+
+</style>
+</head>
+<body BACKGROUND="image.jpg">
+
+<div id='outer'>
+
+	<div id='box'></div>
+	<div id='topbar' style><p id='shiz'><em>e</em>Calendar</p></div>
+	<div id='calendar'>
+	</div>
+
+</div>
+
+</body>
+</html>
