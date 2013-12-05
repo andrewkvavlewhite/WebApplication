@@ -1,0 +1,5 @@
+So far I have put together a very simple server that can take Get requests. 
+I have also put together a rigid skeleton of my user interface but I have inserted 
+and greatly modified an event calendar that is a major part of the project. 
+I still need to create functionality between the calendar and the server and create a database. 
+I will be able to make these things happen in the next couple weeks.
