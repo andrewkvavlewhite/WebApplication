@@ -7,6 +7,6 @@ on my machine and have figured out how to work it with node.js, so I can start u
 The hold up I'm having currently is with Ajax and JSON. Whenever I pass JSON to the server
 using Ajax, the JSON data becomes circular and unable to be used at all. I've tried looking
 into a few things but I haven't been able to figure out how to get the communication
-between my client, server and database working. That all depends on Ajax and JSON. Once
+between my client, server and database working. That's all depends on Ajax and JSON. Once
 I get that figured out though I should be good to finish up all I can before I have to 
 turn it in.
