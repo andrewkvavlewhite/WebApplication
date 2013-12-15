@@ -1,0 +1,28 @@
+#body {
+	/*background-image: url('suffolk-savanna-sunset.jpg');*/
+}
+
+
+#example {
+	margin-top: 1%;
+	margin-left: 25%;
+	position: fixed;
+	width: 50%;
+}
+
+#mycal {
+	width: 100.7%;
+}
+
+#topbar {
+	margin-top: 0px;
+	height: 4vh;
+	width: 99vw;
+	background-color: #3B5998;
+	/*position: fixed;*/
+	text-align: left;
+	line-height: -40px;
+	font-size: 3em;
+	font-family: Florence;
+	padding: 0px:
+}
